@@ -4,8 +4,8 @@ services:
   noip:
     build:
       context: .
-      args:
-        - NOIP_USER
-        - NOIP_PASSWORD
     image: noip
     container_name: noip
+    environment:
+      - NOIP_USER=${NOIP_USER}
+      - NOIP_PASSWORD=${NOIP_PASSWORD}
