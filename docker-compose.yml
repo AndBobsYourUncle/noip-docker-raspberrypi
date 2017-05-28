@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  noip:
+    build:
+      context: .
+      args:
+        - NOIP_USER
+        - NOIP_PASSWORD
+    image: noip
+    container_name: noip
